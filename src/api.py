@@ -73,31 +73,6 @@ async def publish_post(data: PublishInModel):
     return resp
 
 
-@app.get("/subscribe", status_code=201)
-async def subscribe_post(topic: str):
-    print(topic)
-    return StreamingResponse(_stream_sub_response(topic),
-                             media_type='application/json')
-
-
-# async def _stream_sub_response(topic):
-#     q = deque()
-#     def _on_msg(msg: Dict[str, Any]):
-#         print('MSG')
-#         q.appendleft(msg)
-
-#     sub = cnode.create_subscriber(topic=topic, on_message=_on_msg)
-#     sub.run()
-#     while True:
-#         if len(q) > 0:
-#             msg = q.pop()
-#             print(msg)
-#             yield msg
-#         await asyncio.sleep(0.1)
-    # sub.stop()
-    # del sub
-
-
 class ConnectionManager:
     def __init__(self):
         self.active_connections: List[WebSocket] = []
