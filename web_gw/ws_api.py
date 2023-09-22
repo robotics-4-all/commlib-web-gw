@@ -91,6 +91,7 @@ async def _ws_subscribe_handle(topic: str, websocket: WebSocket):
         print('MSG')
         q.appendleft(msg)
 
+    gnode = CommlibProvider.gnode
     sub = gnode.create_subscriber(topic=topic, on_message=_on_msg)
     sub.run()
     while True:
@@ -99,4 +100,3 @@ async def _ws_subscribe_handle(topic: str, websocket: WebSocket):
             print(msg)
         await asyncio.sleep(INTERVAL)
     sub.stop()
-    # del sub

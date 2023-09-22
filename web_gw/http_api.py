@@ -7,8 +7,6 @@ from pydantic import BaseModel
 
 from .commlib_provider import CommlibProvider
 
-gnode = CommlibProvider.gnode
-
 INTERVAL = 0.01
 
 
@@ -53,7 +51,7 @@ async def publish_put(data: PublishInModel):
 
 
 @router.put("/rpc", status_code=201, response_model=RPCOutModel)
-async def publish_post(data: RPCInModel):
+async def rpc_call_http(data: RPCInModel):
     print(f'RPC call: {data.topic}')
     resp = RPCOutModel(response={})
     try:
