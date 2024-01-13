@@ -1,2 +1,3 @@
-commlib-py>=0.11.1
-fastapi
+commlib-py>=0.11.2
+uvicorn==0.25.0
+fastapi>=0.100.0
