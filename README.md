@@ -1,5 +1,5 @@
 # commlib-web-gw
-HTTP.REST Gateway for commlib.
+Web Gateway for [Commlib](https://github.com/robotics-4-all/commlib-py).
 Privides a REST API for publishing to Topics and for calling RPCs.
 
 This package also provides a Websocket API for subscribing and publishing to Topics asynchronously.
