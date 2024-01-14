@@ -1,4 +1,8 @@
 # commlib-web-gw
+
+![image](https://github.com/robotics-4-all/commlib-web-gw/assets/4770702/afa13c7d-81f0-4c07-a501-32ad43e3f9c5)
+
+
 Web Gateway for [Commlib](https://github.com/robotics-4-all/commlib-py).
 Privides a REST API for publishing to Topics and for calling RPCs.
 
